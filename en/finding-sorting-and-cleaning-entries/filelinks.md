@@ -18,12 +18,12 @@ JabRef offers following directory settings:
 
    ![Main file directory](../.gitbook/assets/preferences-file-mainfiledirectory%20%282%29.png)
 
-2. File → Library properties → General file directory.
-3. File → Library properties → User-specific file directory
+2. Library → Library properties (User-specific file directory)
 
    ![Override default file directories](../.gitbook/assets/libraryproperties-overridedefaultfiledirectories%20%282%29.png)
 
-One of these settings is required. Mostly the "Main file directory" is enough.
+By default absolute paths to linked files are stored. This means that moving the .bib file will maintain the link.
+Moving the the linked files or folder containing the files will however break all the .bib links. For this reason it's best to use one of the two configurations above.
 
 JabRef enables setting a directory per database. When sharing a library across multiple persons, each user might have a different directory. Either each user can set his directory in the "Main file directory". In case the group also shares papers and thus there are two directories \(the private one and a group-shared one\), one can set a directory within the library \(the "General file directory"\). In case a user has a different location of the shared folder \(e.g., different paths on Linux and Windows\), he can use the "User-specific file directory". This settings is persisted in the `bib` file in a way that it does not overwrite the setting of another user. For this, JabRef uses the username of the currently logged in user \(`-<loginname>` is used as suffix in the `jabref-meta` field\). So, both `mary` and `aileen` can set a different user-specific file directory.
 
